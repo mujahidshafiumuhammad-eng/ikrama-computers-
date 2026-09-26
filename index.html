@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IKRAMA Computers Stationary and Mult Biz Concept, Kafin Maiyaki. Computers, stationery, printing, design and digital services.">
+  <meta name="theme-color" content="#071b45">
+  <title>IKRAMA Computers | Stationery & Mult Biz Concept</title>
+  <style>
+    :root{
+      --navy:#071b45;
+      --blue:#0d3b82;
+      --orange:#f47b16;
+      --light:#f5f8fc;
+      --white:#fff;
+      --text:#182235;
+      --muted:#667085;
+      --shadow:0 12px 35px rgba(7,27,69,.10);
+      --radius:20px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:min(1150px,92%);margin:auto}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid #e9edf4}
+    .nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--navy)}
+    .brand img{width:58px;height:58px;object-fit:contain}
+    .brand span{font-size:1rem}
+    .menu{display:flex;align-items:center;gap:25px;list-style:none}
+    .menu a{font-weight:700;font-size:.95rem;color:#27344c;transition:.25s}
+    .menu a:hover{color:var(--orange)}
+    .menu .cta{background:var(--orange);color:#fff;padding:11px 18px;border-radius:999px}
+    .menu .cta:hover{background:var(--navy);color:#fff}
+    .hamburger{display:none;border:0;background:transparent;font-size:28px;color:var(--navy);cursor:pointer}
+
+    /* Hero */
+    .hero{background:
+      radial-gradient(circle at 85% 20%,rgba(244,123,22,.16),transparent 28%),
+      radial-gradient(circle at 15% 80%,rgba(13,59,130,.12),transparent 30%),
+      linear-gradient(135deg,#fff,#f2f6fb);padding:90px 0 75px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:55px}
+    .eyebrow{display:inline-block;color:var(--orange);font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+    h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.03;color:var(--navy);margin-bottom:22px}
+    h1 span{color:var(--orange)}
+    .hero p{font-size:1.12rem;color:var(--muted);max-width:650px;margin-bottom:28px}
+    .buttons{display:flex;flex-wrap:wrap;gap:13px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:12px;font-weight:800;transition:.25s;border:2px solid transparent}
+    .btn-primary{background:var(--navy);color:#fff}
+    .btn-primary:hover{background:var(--orange);transform:translateY(-2px)}
+    .btn-outline{border-color:var(--navy);color:var(--navy)}
+    .btn-outline:hover{background:var(--navy);color:#fff}
+    .hero-logo{background:#fff;border-radius:32px;padding:25px;box-shadow:var(--shadow);border:1px solid #e8edf5}
+    .hero-logo img{width:100%;max-height:480px;object-fit:contain}
+
+    /* General */
+    section{padding:85px 0}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 45px}
+    .section-head .eyebrow{margin-bottom:5px}
+    .section-head h2{font-size:clamp(2rem,4vw,3rem);color:var(--navy);margin-bottom:10px}
+    .section-head p{color:var(--muted)}
+    .bg-light{background:var(--light)}
+
+    /* Services */
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .card{background:#fff;border:1px solid #e7ecf3;border-radius:var(--radius);padding:28px;box-shadow:0 8px 25px rgba(7,27,69,.05);transition:.25s}
+    .card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}
+    .icon{width:58px;height:58px;border-radius:16px;background:#fff2e8;color:var(--orange);display:grid;place-items:center;font-size:28px;margin-bottom:18px}
+    .card h3{color:var(--navy);margin-bottom:8px;font-size:1.2rem}
+    .card p{color:var(--muted);font-size:.96rem}
+
+    /* About */
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .about-box{background:var(--navy);color:#fff;border-radius:28px;padding:38px;position:relative;overflow:hidden}
+    .about-box:after{content:"";position:absolute;width:170px;height:170px;border:25px solid var(--orange);border-radius:50%;right:-70px;bottom:-90px}
+    .about-box h3{font-size:2rem;margin-bottom:12px}
+    .about-box p{color:#dce5f4}
+    .ticks{display:grid;gap:15px;margin-top:25px}
+    .tick{display:flex;gap:10px;align-items:flex-start}
+    .tick b{color:var(--orange)}
+    .about-copy h2{font-size:2.7rem;color:var(--navy);line-height:1.15;margin-bottom:18px}
+    .about-copy p{color:var(--muted);margin-bottom:18px}
+
+    /* Stats */
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:45px}
+    .stat{padding:25px;text-align:center;border-radius:18px;background:#fff;border:1px solid #e6ebf2}
+    .stat strong{display:block;font-size:2rem;color:var(--orange)}
+    .stat span{color:var(--muted);font-size:.9rem}
+
+    /* Products */
+    .product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .product{border-radius:18px;background:#fff;border:1px solid #e7ecf3;overflow:hidden;transition:.25s}
+    .product:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .product-top{height:125px;background:linear-gradient(135deg,#eef4ff,#fff4e9);display:grid;place-items:center;font-size:42px}
+    .product-body{padding:18px}
+    .product h3{font-size:1rem;color:var(--navy);margin-bottom:5px}
+    .product p{font-size:.87rem;color:var(--muted)}
+
+    /* CTA */
+    .cta-section{padding:35px 0 85px}
+    .cta-box{background:linear-gradient(120deg,var(--navy),#0e3f87);color:#fff;border-radius:28px;padding:45px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .cta-box h2{font-size:2.2rem;margin-bottom:7px}
+    .cta-box p{color:#dbe5f5}
+    .cta-box .btn{background:var(--orange);color:#fff}
+    .cta-box .btn:hover{background:#fff;color:var(--navy)}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:30px}
+    .contact-info{background:var(--navy);color:#fff;border-radius:25px;padding:35px}
+    .contact-info h2{font-size:2rem;margin-bottom:10px}
+    .contact-info>p{color:#d6e0ef;margin-bottom:25px}
+    .contact-item{display:flex;gap:14px;margin:20px 0}
+    .contact-item .ci{width:42px;height:42px;border-radius:12px;background:rgba(244,123,22,.18);display:grid;place-items:center;color:var(--orange)}
+    .contact-item small{display:block;color:#b9c7dc}
+    .contact-item a:hover{color:var(--orange)}
+    form{background:#fff;border:1px solid #e5eaf1;border-radius:25px;padding:35px;box-shadow:var(--shadow)}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    label{display:block;font-weight:700;font-size:.9rem;color:var(--navy);margin-bottom:7px}
+    input,textarea{width:100%;padding:13px 14px;border:1px solid #d8e0eb;border-radius:11px;font:inherit;outline:none}
+    input:focus,textarea:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(244,123,22,.1)}
+    .field{margin-bottom:17px}
+    textarea{min-height:140px;resize:vertical}
+    form button{cursor:pointer;width:100%;border:0}
+
+    /* Footer */
+    footer{background:#050f25;color:#fff;padding:50px 0 25px}
+    .footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px}
+    .footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:15px}
+    .footer-brand img{width:62px;height:62px;object-fit:contain;background:#fff;border-radius:10px}
+    footer p,footer a{color:#aebbd0}
+    footer a:hover{color:var(--orange)}
+    footer h3{margin-bottom:15px}
+    .footer-links{display:grid;gap:8px}
+    .copyright{border-top:1px solid #1c2a43;margin-top:35px;padding-top:20px;text-align:center;color:#8290a8;font-size:.85rem}
+
+    #topBtn{position:fixed;right:20px;bottom:20px;width:45px;height:45px;border:0;border-radius:50%;background:var(--orange);color:#fff;font-size:20px;display:none;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,.18);z-index:999}
+
+    @media(max-width:900px){
+      .menu{position:absolute;left:0;right:0;top:78px;background:#fff;border-bottom:1px solid #e8edf4;padding:18px 5%;display:none;flex-direction:column;align-items:stretch}
+      .menu.show{display:flex}
+      .menu a{display:block;padding:9px 0}
+      .menu .cta{text-align:center}
+      .hamburger{display:block}
+      .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
+      .cards{grid-template-columns:repeat(2,1fr)}
+      .product-grid{grid-template-columns:repeat(2,1fr)}
+      .stats{grid-template-columns:repeat(2,1fr)}
+      .cta-box{flex-direction:column;align-items:flex-start}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:560px){
+      section{padding:65px 0}
+      .hero{padding:65px 0}
+      .cards,.product-grid,.stats,.footer-grid,.form-row{grid-template-columns:1fr}
+      .hero-logo{padding:12px}
+      .cta-box{padding:30px 24px}
+      .cta-box h2{font-size:1.8rem}
+      .brand span{font-size:.86rem}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="IKRAMA Computers home">
+      <img src="logo.png" alt="IKRAMA Computers logo">
+      <span>IKRAMA COMPUTERS</span>
+    </a>
+    <button class="hamburger" id="menuBtn" aria-label="Open menu">☰</button>
+    <ul class="menu" id="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="cta" href="#contact">Get in Touch</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Kafin Maiyaki • Quality • Trust</span>
+        <h1>IKRAMA <span>Computers</span></h1>
+        <p>Computers, stationery, printing, graphic design and digital business services — all in one place.</p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="#services">Explore Services</a>
+          <a class="btn btn-outline" href="#contact">Contact Us</a>
+        </div>
+      </div>
+      <div class="hero-logo">
+        <img src="logo.png" alt="IKRAMA Computers Stationery and Mult Biz Concept logo">
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">What We Do</span>
+        <h2>Our Services</h2>
+        <p>Professional digital and stationery solutions for students, businesses, organizations and individuals.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="icon">💻</div><h3>Computer Services</h3><p>Computer setup, software installation, document preparation and general computer support.</p></article>
+        <article class="card"><div class="icon">🖨️</div><h3>Printing & Photocopy</h3><p>Quality document printing, photocopying, scanning and other office document services.</p></article>
+        <article class="card"><div class="icon">🎨</div><h3>Graphic Design</h3><p>Business flyers, banners, posters, invitations, certificates and professional designs.</p></article>
+        <article class="card"><div class="icon">📚</div><h3>Stationery</h3><p>School and office stationery, notebooks, pens, rulers and useful everyday supplies.</p></article>
+        <article class="card"><div class="icon">🪪</div><h3>ID Card Services</h3><p>ID card design and printing solutions for schools, businesses, groups and organizations.</p></article>
+        <article class="card"><div class="icon">🌐</div><h3>Digital Services</h3><p>Online applications, typing, CV preparation and other convenient digital services.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light" id="about">
+    <div class="container about-grid">
+      <div class="about-box">
+        <h3>IKRAMA Computers</h3>
+        <p>Stationery and Mult Biz Concept</p>
+        <div class="ticks">
+          <div class="tick"><b>✓</b><span>Friendly and reliable customer service</span></div>
+          <div class="tick"><b>✓</b><span>Quality computer and stationery solutions</span></div>
+          <div class="tick"><b>✓</b><span>Fast and professional digital services</span></div>
+          <div class="tick"><b>✓</b><span>Serving customers in Kafin Maiyaki</span></div>
+        </div>
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow">About Us</span>
+        <h2>Your trusted local technology & stationery center.</h2>
+        <p>IKRAMA Computers combines computer services, stationery, printing, graphic design and digital support under one brand.</p>
+        <p>Whether you need a document printed, a professional design created, stationery purchased or help with a digital task, our goal is to make the process simple and convenient.</p>
+        <a class="btn btn-primary" href="#contact">Talk to Us</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Why Choose Us</span>
+        <h2>Built Around Your Needs</h2>
+        <p>A clean, dependable service experience for everyday computer and stationery needs.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>01</strong><span>Customer Focus</span></div>
+        <div class="stat"><strong>02</strong><span>Quality Service</span></div>
+        <div class="stat"><strong>03</strong><span>Fast Support</span></div>
+        <div class="stat"><strong>04</strong><span>One-Stop Center</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-light" id="products">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Our Products</span>
+        <h2>Computer & Stationery</h2>
+        <p>Examples of products and supplies you can feature on the website.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product"><div class="product-top">💻</div><div class="product-body"><h3>Laptops & Computers</h3><p>Computer equipment and accessories.</p></div></article>
+        <article class="product"><div class="product-top">🖱️</div><div class="product-body"><h3>Accessories</h3><p>Mouse, keyboard, cables and more.</p></div></article>
+        <article class="product"><div class="product-top">📓</div><div class="product-body"><h3>Notebooks</h3><p>School and office notebooks.</p></div></article>
+        <article class="product"><div class="product-top">✏️</div><div class="product-body"><h3>Writing Materials</h3><p>Pens, pencils and stationery.</p></div></article>
+        <article class="product"><div class="product-top">🖨️</div><div class="product-body"><h3>Printer Supplies</h3><p>Printing-related supplies and accessories.</p></div></article>
+        <article class="product"><div class="product-top">📄</div><div class="product-body"><h3>Paper & Documents</h3><p>Paper and document preparation services.</p></div></article>
+        <article class="product"><div class="product-top">🗂️</div><div class="product-body"><h3>Office Supplies</h3><p>Useful supplies for offices and schools.</p></div></article>
+        <article class="product"><div class="product-top">🪪</div><div class="product-body"><h3>ID Cards</h3><p>Design and printing for organizations.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <div>
+          <h2>Need a computer or printing service?</h2>
+          <p>Contact IKRAMA Computers today and tell us what you need.</p>
+        </div>
+        <a class="btn" href="#contact">Contact IKRAMA</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Get In Touch</span>
+        <h2>Contact Us</h2>
+        <p>You can reach IKRAMA Computers using the phone, WhatsApp and email details below.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>IKRAMA Computers</h2>
+          <p>Stationery and Mult Biz Concept</p>
+          <div class="contact-item"><div class="ci">📍</div><div><small>Location</small><b>Unguwar Rimi, Kafin Maiyaki, Kiru Local Government, Kano State, Nigeria</b></div></div>
+          <div class="contact-item"><div class="ci">📞</div><div><small>Phone</small><a href="tel:+2348033722625">08033722625 / 08037833597</a></div></div>
+          <div class="contact-item"><div class="ci">💬</div><div><small>WhatsApp</small><a href="https://wa.me/2348033722625" target="_blank">WhatsApp: 08033722625</a></div></div>
+          <div class="contact-item"><div class="ci">✉️</div><div><small>Email</small><a href="mailto:ikramacomputers@gmail.com">ikramacomputers@gmail.com</a></div></div>
+        </div>
+
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="field"><label for="name">Your Name</label><input id="name" required placeholder="Enter your name"></div>
+            <div class="field"><label for="phone">Phone Number</label><input id="phone" required placeholder="080..."></div>
+          </div>
+          <div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="you@example.com"></div>
+          <div class="field"><label for="message">Message</label><textarea id="message" required placeholder="How can we help you?"></textarea></div>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+          <p id="formNote" style="margin-top:12px;color:#667085;font-size:.85rem"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="logo.png" alt="IKRAMA logo"><div><strong>IKRAMA COMPUTERS</strong><br><span>Stationery & Mult Biz Concept</span></div></div>
+        <p>Your local partner for computers, stationery, printing and digital services.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+          <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#products">Products</a><a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h3>Business</h3>
+        <p>Unguwar Rimi, Kafin Maiyaki, Kiru Local Government, Kano State, Nigeria</p>
+        <p style="margin-top:8px">Computers • Stationery • Printing • Design</p>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> IKRAMA Computers Stationery and Mult Biz Concept. All rights reserved.</div>
+  </div>
+</footer>
+
+<button id="topBtn" aria-label="Back to top">↑</button>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const menu = document.getElementById('menu');
+  menuBtn.addEventListener('click', () => menu.classList.toggle('show'));
+  document.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', () => menu.classList.remove('show')));
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const topBtn = document.getElementById('topBtn');
+  window.addEventListener('scroll', () => {
+    topBtn.style.display = window.scrollY > 500 ? 'block' : 'none';
+  });
+  topBtn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const note = document.getElementById('formNote');
+    if(!name || !phone || !message){
+      note.textContent = 'Please fill in your name, phone number and message.';
+      return;
+    }
+    // Demo action: opens WhatsApp. Replace the number below with the real business number.
+    const businessNumber = '2348033722625';
+    const text = `Hello IKRAMA Computers,%0AName: ${encodeURIComponent(name)}%0APhone: ${encodeURIComponent(phone)}%0AMessage: ${encodeURIComponent(message)}`;
+    window.open(`https://wa.me/${businessNumber}?text=${text}`, '_blank');
+    note.textContent = 'Opening WhatsApp...';
+  });
+</script>
+</body>
+</html>
