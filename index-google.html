@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="YqBsEsDCWJ-fmnI57EzsEsbZORi2NSmO5FrMiJ3Au6M" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IKRAMA Computers Stationery & Mult Biz Concept - Computer, printing and stationery services in Kafin Maiyaki, Kano State.">
+  <title>IKRAMA Computers | Stationery & Mult Biz Concept</title>
+
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      line-height:1.6;
+      background:#f5f8fc;
+      color:#172033;
+    }
+    a{text-decoration:none;color:inherit}
+    .topbar{
+      background:#071d49;
+      color:#fff;
+      text-align:center;
+      padding:8px 15px;
+      font-size:14px;
+    }
+    header{
+      background:linear-gradient(135deg,#073b8c,#0b63ce);
+      color:#fff;
+      padding:22px 18px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 3px 12px rgba(0,0,0,.15);
+    }
+    .nav{
+      max-width:1100px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .brand img{
+      width:58px;height:58px;
+      object-fit:contain;
+      background:#fff;
+      border-radius:12px;
+      padding:5px;
+    }
+    .brand h1{font-size:20px;line-height:1.2}
+    .brand p{font-size:12px;opacity:.9}
+    nav{display:flex;gap:18px;flex-wrap:wrap}
+    nav a{font-weight:bold;font-size:14px}
+    nav a:hover{color:#ffd43b}
+
+    .hero{
+      max-width:1100px;
+      margin:30px auto;
+      padding:55px 25px;
+      border-radius:24px;
+      background:linear-gradient(135deg,#e8f4ff,#fff);
+      text-align:center;
+      box-shadow:0 8px 30px rgba(0,0,0,.08);
+    }
+    .hero h2{
+      color:#073b8c;
+      font-size:clamp(30px,6vw,55px);
+      margin-bottom:12px;
+    }
+    .hero h3{font-size:24px;margin-bottom:10px}
+    .hero p{max-width:750px;margin:0 auto 22px;color:#536174}
+    .buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .btn{
+      display:inline-block;
+      padding:12px 20px;
+      border-radius:10px;
+      background:#073b8c;
+      color:#fff;
+      font-weight:bold;
+    }
+    .btn:hover{background:#052a65}
+    .btn.green{background:#159447}
+    .btn.yellow{background:#f5b700;color:#172033}
+
+    section{
+      max-width:1100px;
+      margin:35px auto;
+      padding:0 18px;
+    }
+    .section-title{text-align:center;margin-bottom:25px}
+    .section-title h2{font-size:30px;color:#073b8c}
+    .section-title p{color:#667085}
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:18px;
+    }
+    .card{
+      background:#fff;
+      border-radius:16px;
+      padding:22px;
+      text-align:center;
+      box-shadow:0 5px 20px rgba(0,0,0,.07);
+      border:1px solid #e7edf5;
+    }
+    .icon{font-size:42px;margin-bottom:10px}
+    .card h3{color:#073b8c;margin-bottom:7px}
+    .card p{color:#667085;font-size:14px}
+
+    .products .card{text-align:left}
+    .products .icon{text-align:center}
+    .price{
+      margin-top:12px;
+      color:#159447;
+      font-weight:bold;
+    }
+
+    .contact{
+      background:#073b8c;
+      color:#fff;
+      border-radius:22px;
+      padding:35px 22px;
+    }
+    .contact .section-title h2,
+    .contact .section-title p{color:#fff}
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:15px;
+    }
+    .contact-box{
+      background:rgba(255,255,255,.1);
+      border-radius:14px;
+      padding:18px;
+    }
+    .contact-box strong{display:block;color:#ffd43b;margin-bottom:5px}
+
+    footer{
+      background:#071d49;
+      color:#fff;
+      text-align:center;
+      padding:25px 15px;
+      margin-top:45px;
+    }
+    footer p{font-size:14px;margin:5px}
+
+    @media(max-width:700px){
+      header{position:relative}
+      .nav{flex-direction:column}
+      nav{justify-content:center}
+      .hero{margin:18px 12px;padding:40px 18px}
+      section{padding:0 12px}
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    📍 Unguwar Rimi, Kafin Maiyaki, Kiru LGA, Kano State, Nigeria
+  </div>
+
+  <header>
+    <div class="nav">
+      <a href="#home" class="brand">
+        <img src="logo.png" alt="IKRAMA Computers Logo">
+        <div>
+          <h1>IKRAMA COMPUTERS</h1>
+          <p>Stationery & Mult Biz Concept</p>
+        </div>
+      </a>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+
+    <div class="hero">
+      <h2>IKRAMA COMPUTERS</h2>
+      <h3>Stationery & Mult Biz Concept</h3>
+      <p>
+        Your trusted place for computer services, printing, photocopying,
+        stationery products and other business services in Kafin Maiyaki.
+      </p>
+
+      <div class="buttons">
+        <a class="btn green" href="tel:08033722625">📞 Call Us</a>
+        <a class="btn" href="mailto:ikramacomputers@gmail.com">✉️ Email Us</a>
+        <a class="btn yellow" href="#products">🛒 View Products</a>
+      </div>
+    </div>
+
+    <section id="services">
+      <div class="section-title">
+        <h2>Our Services</h2>
+        <p>Quality and reliable services for individuals, students and businesses.</p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="icon">💻</div>
+          <h3>Computer Services</h3>
+          <p>Computer-related services, typing, document preparation and more.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🖨️</div>
+          <h3>Printing</h3>
+          <p>Document printing and other professional printing services.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📄</div>
+          <h3>Photocopy</h3>
+          <p>Fast and convenient photocopying for documents and school work.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🎨</div>
+          <h3>Graphics & Design</h3>
+          <p>Posters, banners, business designs and other graphic materials.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="products">
+      <div class="section-title">
+        <h2>Stationery Products</h2>
+        <p>Some of the products available at IKRAMA Computers.</p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="icon">📦</div>
+          <h3>Double A Paper</h3>
+          <p>Quality A4 printing paper for office, school and business use.</p>
+          <div class="price">Available in store</div>
+        </div>
+
+        <div class="card">
+          <div class="icon">📄</div>
+          <h3>A1 Paper</h3>
+          <p>A4 70 GSM paper and other paper products.</p>
+          <div class="price">Available in store</div>
+        </div>
+
+        <div class="card">
+          <div class="icon">🖊️</div>
+          <h3>Lucky Ball Pens</h3>
+          <p>Blue pens and other stationery writing materials.</p>
+          <div class="price">Available in store</div>
+        </div>
+
+        <div class="card">
+          <div class="icon">📚</div>
+          <h3>Notebooks</h3>
+          <p>Notebooks and school stationery for students and offices.</p>
+          <div class="price">Available in store</div>
+        </div>
+
+        <div class="card">
+          <div class="icon">✏️</div>
+          <h3>Office Supplies</h3>
+          <p>Pencils, markers, staplers, tapes and other useful supplies.</p>
+          <div class="price">Available in store</div>
+        </div>
+
+        <div class="card">
+          <div class="icon">🗂️</div>
+          <h3>School Materials</h3>
+          <p>Different materials needed by students and teachers.</p>
+          <div class="price">Available in store</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact">
+        <div class="section-title">
+          <h2>Contact IKRAMA Computers</h2>
+          <p>Contact us for enquiries, orders and services.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-box">
+            <strong>📞 Phone 1</strong>
+            <a href="tel:08033722625">08033722625</a>
+          </div>
+
+          <div class="contact-box">
+            <strong>📞 Phone 2</strong>
+            <a href="tel:08037833597">08037833597</a>
+          </div>
+
+          <div class="contact-box">
+            <strong>✉️ Gmail</strong>
+            <a href="mailto:ikramacomputers@gmail.com">
+              ikramacomputers@gmail.com
+            </a>
+          </div>
+
+          <div class="contact-box">
+            <strong>📍 Address</strong>
+            Unguwar Rimi, Kafin Maiyaki, Kiru Local Government, Kano State, Nigeria.
+          </div>
+        </div>
+
+        <div class="buttons" style="margin-top:25px">
+          <a class="btn green" href="https://wa.me/2348033722625" target="_blank">
+            💬 WhatsApp Us
+          </a>
+          <a class="btn yellow" href="mailto:ikramacomputers@gmail.com">
+            ✉️ Send Email
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><strong>IKRAMA COMPUTERS</strong> — Stationery & Mult Biz Concept</p>
+    <p>© 2026 IKRAMA Computers. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
